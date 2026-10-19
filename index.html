@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OMEGAWARE</title>
+<meta name="description" content="OMEGAWARE — GTi touchscreen interface and wireless tools for Gotek floppy emulators.">
+<style>
+  :root {
+    --bg: #14100d;
+    --panel: #201913;
+    --ink: #efe7dc;
+    --dim: #9a8d7e;
+    --accent: #E0663B;
+    --sep: #352a20;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body {
+    background: radial-gradient(ellipse at 50% -20%, #2b2016 0%, var(--bg) 60%);
+    color: var(--ink);
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 20px;
+  }
+  .copper {
+    width: min(560px, 100%);
+    height: 6px;
+    border-radius: 3px;
+    background: linear-gradient(90deg, #7a2d12, var(--accent), #ffb27a, var(--accent), #7a2d12);
+    margin-bottom: 36px;
+  }
+  h1 {
+    font-size: 2rem;
+    letter-spacing: .35em;
+    font-weight: 700;
+  }
+  h1 .omega { color: var(--accent); }
+  .tag {
+    color: var(--dim);
+    margin: 10px 0 40px;
+    font-size: .85rem;
+    letter-spacing: .08em;
+    text-align: center;
+  }
+  .cards { width: min(560px, 100%); display: grid; gap: 14px; }
+  a.card {
+    display: block;
+    background: var(--panel);
+    border: 1px solid var(--sep);
+    border-left: 4px solid var(--accent);
+    border-radius: 8px;
+    padding: 18px 20px;
+    text-decoration: none;
+    color: var(--ink);
+    transition: transform .12s ease, border-color .12s ease;
+  }
+  a.card:hover { transform: translateX(4px); border-color: var(--accent); }
+  a.card b { display: block; font-size: 1rem; letter-spacing: .05em; }
+  a.card span { display: block; color: var(--dim); font-size: .8rem; margin-top: 6px; line-height: 1.5; }
+  footer {
+    margin-top: 48px;
+    color: var(--dim);
+    font-size: .72rem;
+    letter-spacing: .1em;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+  <div class="copper"></div>
+  <h1><span class="omega">&Omega;</span>&nbsp;OMEGAWARE</h1>
+  <p class="tag">touchscreen &amp; wireless tools for Gotek floppy emulators</p>
+
+  <nav class="cards">
+    <a class="card" href="https://mesarim.github.io/Gotek-Touchscreen-interface/">
+      <b>GTi Web Flasher</b>
+      <span>Flash the GTi touchscreen and Webby dongle firmware straight from your browser — pick your board, plug in USB, done.</span>
+    </a>
+    <a class="card" href="https://play.google.com/store/apps/details?id=com.omegaware.gti_app">
+      <b>GTi App &mdash; Google Play</b>
+      <span>Browse your Amiga game library on a phone or tablet and load disks to your Gotek wirelessly.</span>
+    </a>
+    <a class="card" href="https://github.com/mesarim/Gotek-Touchscreen-interface">
+      <b>Project on GitHub</b>
+      <span>Source, documentation, and help for the GTi touchscreen interface.</span>
+    </a>
+  </nav>
+
+  <footer>&Omega; OMEGAWARE &middot; made for the retro desk</footer>
+</body>
+</html>
